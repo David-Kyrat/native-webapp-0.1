@@ -48,26 +48,10 @@
 	];
 	let active = tabs[0];
 
-    function get_path(tabLabel: String) {
-        return "./" + tabLabel.toLowerCase() + "/+page.svelte";
-    }
+	function get_path(tabLabel: String) {
+		return './' + tabLabel.toLowerCase() + '/+page.svelte';
+	}
 </script>
-
-<!-- <nav class={navClass}>
-	<div class={divClasses[0]}>
-		<div class={divClasses[1]} id="navbar-sticky">
-			<ul class={ulClass}>
-				{#each pages as pageName}
-					<li>
-						<a href="/{pageName}" class="{aClassDef} {aInactive}">
-							{pageName == '' ? 'Home' : capitalize(pageName)}
-						</a>
-					</li>
-				{/each}
-			</ul>
-		</div>
-	</div>
-</nav> -->
 
 <div>
 	<TabBar {tabs} let:tab bind:active>
