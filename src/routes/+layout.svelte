@@ -5,11 +5,6 @@
 
 	// NOTE: ================= SMUI TAB BAR =========================
 
-	/* function capitalize(str: String) {
-		return str[0].toUpperCase() + str.slice(1);
-	}
-	let pages = ['', 'bindings', 'about']; */
-
 	let tabs = [
 		{
 			icon: 'mail',
