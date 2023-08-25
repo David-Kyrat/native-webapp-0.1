@@ -1,5 +1,5 @@
 <script>
-	import FancyBtn from '../lib/components/FancyBtn.svelte';
+	import FancyBtn from '$lib/components/FancyBtn.svelte';
 	import { invoke } from '@tauri-apps/api/tauri';
 
 	let input_url;

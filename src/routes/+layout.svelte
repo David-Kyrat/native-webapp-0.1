@@ -1,24 +1,3 @@
-<!-- <script lang="ts">
-  import Tab, { Icon, Label } from '@smui/tab';
-  import TabBar from '@smui/tab-bar';
- 
-  let tabs = [
-    {
-      icon: 'access_time',
-      label: 'Recents',
-    },
-    {
-      icon: 'near_me',
-      label: 'Nearby',
-    },
-    {
-      icon: 'favorite',
-      label: 'Favorites',
-    },
-  ];
-  let active = tabs[0];
-</script> -->
-
 <script lang="ts">
 	import '../app.css';
 	import Tab, { Icon, Label } from '@smui/tab';
@@ -26,11 +5,10 @@
 
 	// NOTE: ================= SMUI TAB BAR =========================
 
-	function capitalize(str) {
+	/* function capitalize(str: String) {
 		return str[0].toUpperCase() + str.slice(1);
 	}
-
-	let pages = ['', 'bindings', 'about'];
+	let pages = ['', 'bindings', 'about']; */
 
 	let tabs = [
 		{
@@ -49,20 +27,28 @@
 	let active = tabs[0];
 
 	function get_path(tabLabel: String) {
-		return './' + tabLabel.toLowerCase() + '/+page.svelte';
+		return '/' + tabLabel.toLowerCase();
 	}
 </script>
 
-<div>
-	<TabBar {tabs} let:tab bind:active>
-		<Tab {tab}>
-			<Icon class="material-icons">{tab.icon}</Icon>
-			<a href={get_path(tab.label)}> <Label>{tab.label}</Label></a>
-		</Tab>
+<div class="w-[100%] max-w-4xl mx-auto">
+	<TabBar
+		{tabs}
+		let:tab
+		bind:active
+		style="display: flex; justify-content: center; align-items: center;"
+	>
+		<a href={get_path(tab.label)}>
+			<Tab {tab}>
+				<Icon class="material-icons">{tab.icon}</Icon>
+				<Label>{tab.label}</Label>
+			</Tab>
+		</a>
 	</TabBar>
 </div>
+<hr />
 
-<main class="w-[90%] max-w-3xl mx-auto mt-24">
+<main class="w-[100%] max-w-4xl mx-auto mt-8">
 	<div class="prose-lg prose-img:rounded-xl prose-a:text-blue-600">
 		<slot />
 	</div>
