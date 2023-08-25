@@ -13,22 +13,22 @@
 	let tabs = [
 		{
 			icon: 'mail',
-			label: 'Mail'
+			label: 'Mail',
+            path: '/',
 		},
 		{
 			icon: 'calendar',
-			label: 'Calendar'
+			label: 'Calendar',
+            path: '/calendar'
 		},
 		{
 			icon: 'favorite',
-			label: 'Favorites'
+			label: 'Favorites',
+            path: '/favorite'
 		}
 	];
 	let active = tabs[0];
 
-	function get_path(tabLabel: String) {
-		return '/' + tabLabel.toLowerCase();
-	}
 </script>
 
 <div class="w-[100%] max-w-4xl mx-auto">
@@ -38,7 +38,7 @@
 		bind:active
 		style="display: flex; justify-content: center; align-items: center;"
 	>
-		<a href={get_path(tab.label)}>
+		<a href={tab.path}>
 			<Tab {tab}>
 				<Icon class="material-icons">{tab.icon}</Icon>
 				<Label>{tab.label}</Label>

@@ -40,24 +40,6 @@ async fn open_window(url: String, handle: tauri::AppHandle) {
     });
 }
 
-/* #[tauri::command]
-async fn open_docs(handle: tauri::AppHandle) {
-    let docs_window = tauri::WindowBuilder::new(
-        &handle,
-        "external", /* the unique window label */
-        tauri::WindowUrl::External("https://tauri.app/".parse().unwrap()),
-    )
-    .build()
-    .unwrap();
-    dbg!(&handle);
-    std::thread::spawn(move || {
-        docs_window.show().expect("alternative window could not be launched");
-        docs_window
-            .request_user_attention(Some(UserAttentionType::Critical))
-            .expect("alternate window could not request attention");
-    });
-} */
-
 fn main() {
     let app: App = tauri::Builder::default()
         .invoke_handler(generate_handler![greet, open_window])

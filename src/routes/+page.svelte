@@ -1,5 +1,5 @@
 <script>
-	/* import FancyBtn from '../lib/components/FancyBtn.svelte';
+	import FancyBtn from '$lib/components/FancyBtn.svelte';
 	import { invoke } from '@tauri-apps/api/tauri';
 
 	let input_url;
@@ -9,31 +9,25 @@
 		await invoke('open_window', {
 			url: new_url
 		});
-	} */
-	/* async function open_docs() {
-		await invoke('open_docs');
-	} */
+	}
 </script>
 
-<!-- <h1>Test openning another window</h1>
+<h1>Mail</h1>
 
-<!-- <FancyBtn text="Open Docs", on_click={open_docs} /> -->
-
-<!-- <input
+<input
 	id="greet-input"
 	placeholder="Enter website url..."
 	bind:value={input_url}
 />
 
 <FancyBtn text="Open window" , on_click={open_window} />
-<!-- <FancyBtn text="Open docs" , on_click={open_docs} /> -->
 
-<!-- <p>Going to {new_url}</p> -->
+<p>Going to {new_url}</p>
 
-<!-- <style>
+<style>
 	input {
         width: 80%;
         padding: 0.5em;
         margin: 2em 0.3em;
 	}
-</style> -->
+</style>
