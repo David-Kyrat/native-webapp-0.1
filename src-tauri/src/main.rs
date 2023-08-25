@@ -1,8 +1,8 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-use tauri::{generate_context, generate_handler, App, UserAttentionType};
 use sha256::digest;
+use tauri::{generate_context, generate_handler, App, UserAttentionType};
 
 #[tauri::command]
 fn greet(name: &str) -> String {
@@ -40,7 +40,7 @@ async fn open_window(url: String, handle: tauri::AppHandle) {
     });
 }
 
-#[tauri::command]
+/* #[tauri::command]
 async fn open_docs(handle: tauri::AppHandle) {
     let docs_window = tauri::WindowBuilder::new(
         &handle,
@@ -56,12 +56,11 @@ async fn open_docs(handle: tauri::AppHandle) {
             .request_user_attention(Some(UserAttentionType::Critical))
             .expect("alternate window could not request attention");
     });
-}
-
+} */
 
 fn main() {
     let app: App = tauri::Builder::default()
-        .invoke_handler(generate_handler![greet, open_window, open_docs])
+        .invoke_handler(generate_handler![greet, open_window])
         .build(generate_context!())
         .expect("error while building tauri application");
 

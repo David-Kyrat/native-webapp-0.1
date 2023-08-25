@@ -10,14 +10,9 @@
 			url: new_url
 		});
 	}
-	/* async function open_docs() {
-		await invoke('open_docs');
-	} */
 </script>
 
-<h1>Test openning another window</h1>
-
-<!-- <FancyBtn text="Open Docs", on_click={open_docs} /> -->
+<h1>Mail</h1>
 
 <input
 	id="greet-input"
@@ -26,7 +21,6 @@
 />
 
 <FancyBtn text="Open window" , on_click={open_window} />
-<!-- <FancyBtn text="Open docs" , on_click={open_docs} /> -->
 
 <p>Going to {new_url}</p>
 
