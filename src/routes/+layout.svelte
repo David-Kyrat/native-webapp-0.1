@@ -9,21 +9,25 @@
 		{
 			icon: 'mail',
 			label: 'Mail',
-            path: '/',
+			path: '/'
 		},
 		{
 			icon: 'calendar',
 			label: 'Calendar',
-            path: '/calendar'
+			path: '/calendar'
 		},
 		{
 			icon: 'favorite',
 			label: 'Favorites',
-            path: '/favorite'
+			path: '/favorite'
+		},
+		{
+			icon: 'settings',
+			label: 'Tests',
+			path: '/test'
 		}
 	];
 	let active = tabs[0];
-
 </script>
 
 <div class="w-[100%] max-w-4xl mx-auto">
@@ -35,7 +39,11 @@
 	>
 		<a href={tab.path}>
 			<Tab {tab}>
-				<Icon class="material-icons">{tab.icon}</Icon>
+				{#if tab.label === 'Calendar'}
+					"󰃭 "
+				{:else}
+					<Icon class="material-icons">{tab.icon}</Icon>
+				{/if}
 				<Label>{tab.label}</Label>
 			</Tab>
 		</a>
