@@ -24,6 +24,8 @@
 		"@smui/drawer": "^7.0.0-beta.9",
 		"@smui/fab": "^7.0.0-beta.9",
 		"@smui/icon-button": "^7.0.0-beta.9",
+		"@smui/tab": "^7.0.0-beta.14",
+		"@smui/tab-bar": "^7.0.0-beta.14",
 		"@smui/textfield": "^7.0.0-beta.9",
 		"@smui/top-app-bar": "^7.0.0-beta.9",
 		"@sveltejs/adapter-auto": "^2.0.0",

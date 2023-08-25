@@ -6,7 +6,7 @@
     "distDir": "../build"
   },
   "package": {
-    "productName": "first-test-fix",
+    "productName": "native-webapp-0.1",
     "version": "0.1.0"
   },
   "tauri": {
@@ -28,7 +28,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "ch.davidkyrat.tauri.test",
+      "identifier": "ch.davidkyrat.tauri.nativewebapp01",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -57,7 +57,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "first-test-fix",
+        "title": "native-webapp-0.1",
         "width": 800
       }
     ]
