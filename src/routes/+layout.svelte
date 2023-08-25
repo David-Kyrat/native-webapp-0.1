@@ -12,8 +12,8 @@
 			path: '/'
 		},
 		{
-			icon: 'calendar',
-			label: 'Calendar',
+			icon: 'light_mode',
+			label: '  Clendar',
 			path: '/calendar'
 		},
 		{
@@ -37,16 +37,14 @@
 		bind:active
 		style="display: flex; justify-content: center; align-items: center;"
 	>
-		<a href={tab.path}>
-			<Tab {tab}>
-				{#if tab.label === 'Calendar'}
-					"󰃭 "
-				{:else}
-					<Icon class="material-icons">{tab.icon}</Icon>
-				{/if}
-				<Label>{tab.label}</Label>
-			</Tab>
-		</a>
+		<Tab {tab} href={tab.path}>
+			{#if tab.label.includes('Calendar')}
+				<i class="nf nf-md-calendar pr-2" />
+			{:else}
+				<Icon class="material-icons">{tab.icon}</Icon>
+			{/if}
+			<Label>{tab.label}</Label>
+		</Tab>
 	</TabBar>
 </div>
 <hr />
@@ -73,4 +71,7 @@
 
 	<!-- SMUI -->
 	<link rel="stylesheet" href="https://unpkg.com/svelte-material-ui/bare.css" />
+
+	<!-- NerdFonts -->
+	<link rel="stylesheet" href="https://www.nerdfonts.com/assets/css/webfont.css" />
 </svelte:head>
