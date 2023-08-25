@@ -2,21 +2,33 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use tauri::{generate_context, generate_handler, App, UserAttentionType};
+use sha256::digest;
 
 #[tauri::command]
 fn greet(name: &str) -> String {
     format!("Hello, {}!", name)
 }
 
-#[tauri::command]
+#[tauri::command(rename_all = "snake_case")]
 async fn open_window(url: String, handle: tauri::AppHandle) {
+    let digest = &digest(&url);
+    let url = url.as_str();
+
     let docs_window = tauri::WindowBuilder::new(
         &handle,
-        "external",
+        digest,
         tauri::WindowUrl::External(url.parse().unwrap()),
     )
     .build()
     .unwrap();
+    dbg!("Opening window to {} digest {}", url, digest);
+    dbg!(&handle);
+    docs_window
+        .show()
+        .expect("alternative window could not be launched");
+    docs_window
+        .request_user_attention(Some(UserAttentionType::Critical))
+        .expect("alternate window could not request attention");
 
     std::thread::spawn(move || {
         docs_window
@@ -37,6 +49,7 @@ async fn open_docs(handle: tauri::AppHandle) {
     )
     .build()
     .unwrap();
+    dbg!(&handle);
     std::thread::spawn(move || {
         docs_window.show().expect("alternative window could not be launched");
         docs_window
