@@ -14,7 +14,7 @@
 </script>
 
 <div class="card-container">
-	<Card style="min-width: 100px;">
+	<Card style="min-width: 100px; display: flex;" >
 		<PrimaryAction on:click={() => open_window()}>
 			<Media class="card-media-16x9" aspectRatio="16x9" style="background-image: url({icon}); ">
 				<div style="color: #fff; position: absolute; bottom: 5px; left: 16px;">

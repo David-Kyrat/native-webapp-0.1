@@ -21,8 +21,6 @@ async fn open_window(url: String, handle: tauri::AppHandle) {
     )
     .build()
     .unwrap();
-    dbg!("Opening window to {} digest {}", url, digest);
-    dbg!(&handle);
     docs_window
         .show()
         .expect("alternative window could not be launched");
