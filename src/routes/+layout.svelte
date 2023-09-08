@@ -3,6 +3,8 @@
 	import Tab, { Icon, Label } from '@smui/tab';
 	import TabBar from '@smui/tab-bar';
 
+	let uni_login_url = 'https://portail.unige.ch';
+
 	// NOTE: ================= SMUI TAB BAR =========================
 
 	let tabs = [
@@ -25,6 +27,11 @@
 			icon: 'settings',
 			label: 'Tests',
 			path: '/test'
+		},
+		{
+			icon: 'book',
+			label: 'Uni Login',
+			path: uni_login_url
 		}
 	];
 	let active = tabs[0];
