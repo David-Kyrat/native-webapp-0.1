@@ -53,26 +53,27 @@
 
 <!-- App shortcut grid -->
 <!-- <div class="flex flex-row flex-wrap justify-between content-between mx-3 max-w-5xl"> -->
-<div class="grid grid-cols-3 gap-6 mx-5 place-content-evenly max-w-xl">
+<!-- <div class="grid grid-cols-3 gap-6 mx-5 place-content-evenly max-w-xl"> -->
 	<!-- <div class="grid {app_nb2} gap-{app_nb}"> -->
-	{#each app_shortcuts as ap}
-		<AppShortcut title={ap.title} icon={ap.icon} url={ap.url} styleclass="" />
-	{/each}
+<!-- 	{#each app_shortcuts as ap} -->
+<!-- 		<AppShortcut title={ap.title} icon={ap.icon} url={ap.url} styleclass="" /> -->
+<!-- 	{/each} -->
+<!-- </div> -->
+
+<div class="bg-gray-200">
+	<ImageList class="my-image-list-standard">
+		{#each Array(15) as _unused, i}
+			<Item class="my-0">
+				<!-- <ImageAspectContainer class="w-20"> -->
+					<Image src="https://placehold.co/190x190?text=square" alt="Image {i + 1}" class="my-0 pt-5"/>
+				<!-- </ImageAspectContainer> -->
+				<Supporting >
+					<Label>Image {i + 1}</Label>
+				</Supporting>
+			</Item>
+		{/each}
+	</ImageList>
 </div>
-
-<ImageList class="my-image-list-standard">
-	{#each Array(15) as _unused, i}
-		<Item>
-			<ImageAspectContainer>
-				<Image src="https://placehold.co/190x190?text=square" alt="Image {i + 1}" />
-			</ImageAspectContainer>
-			<Supporting>
-				<Label>Image {i + 1}</Label>
-			</Supporting>
-		</Item>
-	{/each}
-</ImageList>
-
 <hr />
 
 <style>

@@ -49,7 +49,7 @@
 </div>
 <hr />
 
-<main class="w-[100%] max-w-4xl mx-auto mt-8">
+<main class="w-[100%] max-w-5xl mx-auto mt-8">
 	<div class="prose-lg prose-img:rounded-xl prose-a:text-blue-600">
 		<slot />
 	</div>
