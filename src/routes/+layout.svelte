@@ -30,7 +30,7 @@
 	let active = tabs[0];
 </script>
 
-<div class="w-[100%] max-w-4xl mx-auto">
+<div class="w-[100%] max-w-5xl mx-auto">
 	<TabBar
 		{tabs}
 		let:tab

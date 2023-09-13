@@ -1,5 +1,6 @@
 <script>
 	import AppShortcut from '$lib/components/AppShortcut.svelte';
+	import Elevation from './_Elevation.svelte';
 
 	let app_shortcuts = [
 		{
@@ -11,35 +12,60 @@
 			title: 'ProtonMail',
 			icon: 'https://www.privacyguides.org/en/assets/img/email/protonmail.svg',
 			url: 'https://mail.proton.me/u/6/inbox'
+		},
+		{
+			title: 'ProtonMail',
+			icon: 'https://www.privacyguides.org/en/assets/img/email/protonmail.svg',
+			url: 'https://mail.proton.me/u/6/inbox'
+		},
+		{
+			title: 'ProtonMail',
+			icon: 'https://www.privacyguides.org/en/assets/img/email/protonmail.svg',
+			url: 'https://mail.proton.me/u/6/inbox'
+		},
+		{
+			title: 'ProtonMail',
+			icon: 'https://www.privacyguides.org/en/assets/img/email/protonmail.svg',
+			url: 'https://mail.proton.me/u/6/inbox'
+		},
+		{
+			title: 'ProtonMail',
+			icon: 'https://www.privacyguides.org/en/assets/img/email/protonmail.svg',
+			url: 'https://mail.proton.me/u/6/inbox'
 		}
 	];
+	// $: app_nb = app_shortcuts.length;
+	let col_nb = 4;
+	// let grid_cols = `grid-cols-4`;
+    let grid_cols = `grid-cols-${col_nb}`;
+    let gap = `gap-8`;
+	gap = `gap-${col_nb * 2}`;
 </script>
 
 <h1>Mail</h1>
 
-<!-- <input id="greet-input" placeholder="Enter website url..." bind:value={input_url} />
-<FancyBtn text="Open window" , on_click={open_window} />
-<p>Going to {new_url}</p> -->
+<!-- App shortcut grid -->
+<!-- <div class="flex flex-row flex-wrap justify-between content-between mx-3 max-w-5xl"> -->
+<div class="grid {grid_cols} gap-8 mx-5 place-content-evenly">
+	<!-- <div class="grid {app_nb2} gap-{app_nb}"> -->
+	{#each app_shortcuts as ap}
+		<AppShortcut title={ap.title} icon={ap.icon} url={ap.url} styleclass=""/>
+	{/each}
+</div>
 
-{#each app_shortcuts as ap}
-	<AppShortcut title={ap.title} icon={ap.icon} url={ap.url} />
-{/each}
+<hr />
 
-<!-- <AppShortcut
-	title="Gmail"
-	icon="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
-	url="https://mail.google.com/mail/u/0/#inbox"
-/> -->
 
 <style>
-	input {
+	/*input {
 		width: 80%;
 		padding: 0.5em;
 		margin: 2em 0.3em;
 		margin-bottom: 0;
-	}
+	}*/
 	* :global(AppShortcut) {
-        display: inline-block;
+		display: inline-block;
 		padding: 20em;
 	}
+    
 </style>

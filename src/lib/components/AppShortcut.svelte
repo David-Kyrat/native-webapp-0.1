@@ -5,6 +5,7 @@
 	export let title = 'Title';
 	export let icon = 'https://placehold.co/320x320?text=square';
 
+    export let styleclass;
 	export let url;
 	$: new_url = url && url.length > 0 ? url : 'https://google.com';
 
@@ -13,7 +14,7 @@
 	}
 </script>
 
-<div class="card-container">
+<div class="card-container {styleclass}">
 	<Card style="min-width: 100px; display: flex;" >
 		<PrimaryAction on:click={() => open_window()}>
 			<Media class="card-media-16x9" aspectRatio="16x9" style="background-image: url({icon}); ">
@@ -29,7 +30,8 @@
 
 <style>
 	.card-container {
-		width: 17%;
+        /* max-width: 80%; */
+		/* width: 17%; */
 	}
 
 	* :global(.card-media-16x9) {
