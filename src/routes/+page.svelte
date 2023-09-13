@@ -1,6 +1,6 @@
 <script>
 	import AppShortcut from '$lib/components/AppShortcut.svelte';
-	import Elevation from './_Elevation.svelte';
+	// import Elevation from './_Elevation.svelte';
 
 	let app_shortcuts = [
 		{
@@ -35,26 +35,26 @@
 		}
 	];
 	// $: app_nb = app_shortcuts.length;
-	let col_nb = 4;
-	// let grid_cols = `grid-cols-4`;
-    let grid_cols = `grid-cols-${col_nb}`;
-    let gap = `gap-8`;
-	gap = `gap-${col_nb * 2}`;
+	// let col_nb = 4;
+	/* Still doesnt work consistently :
+    let grid_cols = "grid-cols-3";
+	$: grid_cols = `grid-cols-${col_nb}`;
+	let gap = `gap-8`;
+	gap = `gap-${col_nb * 2}`; */
 </script>
 
 <h1>Mail</h1>
 
 <!-- App shortcut grid -->
 <!-- <div class="flex flex-row flex-wrap justify-between content-between mx-3 max-w-5xl"> -->
-<div class="grid {grid_cols} gap-8 mx-5 place-content-evenly">
+<div class="grid grid-cols-3 gap-6 mx-5 place-content-evenly max-w-xl">
 	<!-- <div class="grid {app_nb2} gap-{app_nb}"> -->
 	{#each app_shortcuts as ap}
-		<AppShortcut title={ap.title} icon={ap.icon} url={ap.url} styleclass=""/>
+		<AppShortcut title={ap.title} icon={ap.icon} url={ap.url} styleclass="" />
 	{/each}
 </div>
 
 <hr />
-
 
 <style>
 	/*input {
@@ -67,5 +67,4 @@
 		display: inline-block;
 		padding: 20em;
 	}
-    
 </style>
