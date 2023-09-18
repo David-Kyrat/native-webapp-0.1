@@ -16,11 +16,11 @@
 			label: '  Calendar',
 			path: '/calendar'
 		},
-		{
+		/* {
 			icon: 'favorite',
 			label: 'Favorites',
 			path: '/favorite'
-		},
+		}, */
 		{
 			icon: 'settings',
 			label: 'Tests',
