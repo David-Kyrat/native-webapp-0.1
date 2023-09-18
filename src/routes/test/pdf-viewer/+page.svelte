@@ -10,6 +10,45 @@
 		active = value;
 		open = false;
 	}
+	let pinned_locations = [
+		'C:/Users/noahm/OneDrive/Documents/BA4/ITDSML-12X004',
+		'C:/Users/noahm/OneDrive/Documents/BA4/ITDSML-12X004',
+		'C:/Users/noahm/OneDrive/Documents/BA4/ITDSML-12X004',
+		'C:/Users/noahm/OneDrive/Documents/BA4/ITDSML-12X004',
+		'C:/Users/noahm/OneDrive/Documents/BA4/ITDSML-12X004',
+		'C:/Users/noahm/OneDrive/Documents/BA4/ITDSML-12X004'
+	];
+
+	/// Get last element of path
+	function path_last(params) {
+		var path = params,
+			paths = [],
+			i = 1;
+    let old_i = 0;
+		while ((i = path.indexOf('/', i) + 1)) {
+			paths.push(path.substr(old_i, i));
+      old_i = i;
+		}
+    let len =paths.length;
+    /* let out = paths[len-2] + "/" + paths[len-1];
+    console.log(paths);
+		return params.substring(params.lastIndexOf('/') + 1); */
+		return paths[len-1];
+	}
+	let pinned_loc_items = new Map();
+	let i = 0;
+	for (const loc of pinned_locations) {
+		pinned_loc_items.set(i, {
+			id: i,
+			uri: loc,
+			on_click: () => setActive(i),
+			activated: active === i,
+			icon: 'folder',
+			// text: loc.replace("C:/Users/noahm/OneDrive/Documents", "Docs")
+			text: path_last(loc)
+		});
+		i += 1;
+	}
 </script>
 
 <!-- <div class="drawer-container"> -->
@@ -22,7 +61,17 @@
 	</Header>
 	<Content>
 		<List>
-			<Item
+			{#each pinned_loc_items as loc_item}
+				<Item
+					href={loc_item[1].uri}
+					on:click={loc_item[1].on_click}
+					activated={loc_item[1].activated}
+				>
+					<Graphic class="material-icons" aria-hidden="true">{loc_item[1].icon}</Graphic>
+					<Text>{loc_item[1].text}</Text>
+				</Item>
+
+				<!-- <Item
 				href="javascript:void(0)"
 				on:click={() => setActive('Inbox')}
 				activated={active === 'Inbox'}
@@ -80,7 +129,8 @@
 			>
 				<Graphic class="material-icons" aria-hidden="true">bookmark</Graphic>
 				<Text>Work</Text>
-			</Item>
+			</Item> -->
+			{/each}
 		</List>
 	</Content>
 </Drawer>
