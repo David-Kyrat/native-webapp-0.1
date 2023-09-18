@@ -1,7 +1,8 @@
-<script lang="ts">
+<script>
 	import '../app.css';
 	import Tab, { Icon, Label } from '@smui/tab';
 	import TabBar from '@smui/tab-bar';
+	import { page } from '$app/stores';
 
 	// NOTE: ================= SMUI TAB BAR =========================
 
@@ -36,17 +37,19 @@
 </script>
 
 <div class="w-[100%] max-w-5xl mx-auto">
-	<TabBar
-		{tabs}
-		let:tab
-		bind:active
-		style="display: flex; justify-content: center; align-items: center;"
-	>
-		<Tab {tab} href={tab.path}>
-			<Icon class="material-icons">{tab.icon}</Icon>
-			<Label>{tab.label}</Label>
-		</Tab>
-	</TabBar>
+	<nav>
+		<TabBar
+			{tabs}
+			let:tab
+			bind:active
+			style="display: flex; justify-content: center; align-items: center;"
+		>
+			<Tab {tab} href={tab.path} aria-current={$page.url.pathname === tab.path}>
+				<Icon class="material-icons">{tab.icon}</Icon>
+				<Label>{tab.label}</Label>
+			</Tab>
+		</TabBar>
+	</nav>
 </div>
 <hr />
 

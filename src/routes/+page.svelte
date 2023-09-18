@@ -9,6 +9,8 @@
 	} from '@smui/image-list';
 	import Paper, { Title, Content } from '@smui/paper';
 	import LayoutGrid, { Cell } from '@smui/layout-grid';
+	import { page } from '$app/stores';
+	$: is_active = $page.url.pathname === '/';
 
 	let app_shortcuts = [
 		{
