@@ -10,29 +10,31 @@ fn greet(name: &str) -> String {
 }
 
 #[tauri::command(rename_all = "snake_case")]
-async fn open_window(url: String, handle: tauri::AppHandle) {
+async fn open_window(url: String, title: String, handle: tauri::AppHandle) {
     let digest = &digest(&url);
     let url = url.as_str();
 
-    let docs_window = tauri::WindowBuilder::new(
+    let new_window = tauri::WindowBuilder::new(
         &handle,
         digest,
         tauri::WindowUrl::External(url.parse().unwrap()),
     )
     .build()
     .unwrap();
-    docs_window
+    new_window.set_title(&title).expect("tauri window title should be setable");
+
+    /* docs_window
         .show()
         .expect("alternative window could not be launched");
     docs_window
         .request_user_attention(Some(UserAttentionType::Critical))
-        .expect("alternate window could not request attention");
-
+        .expect("alternate window could not request attention"); */
+    // open in new thread
     std::thread::spawn(move || {
-        docs_window
+        new_window
             .show()
             .expect("alternative window could not be launched");
-        docs_window
+        new_window
             .request_user_attention(Some(UserAttentionType::Critical))
             .expect("alternate window could not request attention");
     });

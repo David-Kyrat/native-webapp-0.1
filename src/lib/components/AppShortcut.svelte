@@ -10,7 +10,7 @@
 	$: new_url = url && url.length > 0 ? url : 'https://google.com';
 
 	async function open_window() {
-		await invoke('open_window', { url: url });
+		await invoke('open_window', { url: url, title: title });
 	}
 </script>
 
@@ -30,7 +30,7 @@
 
 <style>
 	.card-container {
-        /* max-width: 80%; */
+        max-width: 80%;
 		/* width: 17%; */
 	}
 

@@ -7,6 +7,8 @@
 		Supporting,
 		Label
 	} from '@smui/image-list';
+	import Paper, { Title, Content } from '@smui/paper';
+	import LayoutGrid, { Cell } from '@smui/layout-grid';
 
 	let app_shortcuts = [
 		{
@@ -60,23 +62,30 @@
 <!-- {/each} -->
 <!-- </div> -->
 
-<div class="bg-gray-200">
-	<ImageList class="my-image-list-standard">
-		<!-- {#each Array(15) as _unused, i} -->
-		{#each app_shortcuts as ap}
-			<Item class="my-0">
-				<ImageAspectContainer>
-				<!-- <Image src="https://placehold.co/190x190?text=square" alt="Image {i + 1}" class="my-0 pt-5"/> -->
-				<AppShortcut title={ap.title} icon={ap.icon} url={ap.url} styleclass="" />
-				<Supporting>
-					<Label>Image </Label>
-				</Supporting>
-				</ImageAspectContainer>
-			</Item>
-		{/each}
-	</ImageList>
-</div>
-<hr />
+<!-- <div class="bg-gray-200"> -->
+<Paper class="max-w-[95%] mx-auto">
+	<Title>Apps</Title>
+	<Content>
+		<!-- <ImageList class="my-image-list-standard"> -->
+		<LayoutGrid>
+			{#each app_shortcuts as ap}
+				<Cell>
+					<!-- <Item class="my-0"> -->
+					<!-- <ImageAspectContainer> -->
+					<AppShortcut title={ap.title} icon={ap.icon} url={ap.url} styleclass="" />
+					<Supporting class="!justify-center">
+						<Label class="text-center">{ap.title}</Label>
+					</Supporting>
+					<!-- </ImageAspectContainer> -->
+					<!-- </Item> -->
+				</Cell>
+			{/each}
+			<!-- </ImageList> -->
+		</LayoutGrid>
+	</Content>
+</Paper>
+
+<!-- </div> -->
 
 <style>
 	/*input {

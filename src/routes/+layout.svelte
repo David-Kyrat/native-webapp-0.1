@@ -13,7 +13,7 @@
 		},
 		{
 			icon: 'light_mode',
-			label: '  Clendar',
+			label: '  Calendar',
 			path: '/calendar'
 		},
 		{
@@ -25,6 +25,11 @@
 			icon: 'settings',
 			label: 'Tests',
 			path: '/test'
+		},
+		{
+			icon: 'book',
+			label: 'pdf-viewer-test',
+			path: '/test/pdf-viewer'
 		}
 	];
 	let active = tabs[0];
@@ -38,11 +43,7 @@
 		style="display: flex; justify-content: center; align-items: center;"
 	>
 		<Tab {tab} href={tab.path}>
-			{#if tab.label.includes('Calendar')}
-				<i class="nf nf-md-calendar pr-2" />
-			{:else}
-				<Icon class="material-icons">{tab.icon}</Icon>
-			{/if}
+			<Icon class="material-icons">{tab.icon}</Icon>
 			<Label>{tab.label}</Label>
 		</Tab>
 	</TabBar>
