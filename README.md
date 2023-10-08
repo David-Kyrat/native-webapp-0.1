@@ -11,7 +11,6 @@ Proof of Concept for Shortcut WebApp launching regularly used website in a [taur
 ![screen-proton-view](./static/res/screenshot-proton-view.png)
 
 
-
 ## Developing
 
 Install [tauri](https://tauri.app)
