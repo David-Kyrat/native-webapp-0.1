@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import Drawer, { AppContent, Content, Header, Title, Subtitle, Scrim } from '@smui/drawer';
 	import Button, { Label } from '@smui/button';
 	import List, { Item, Text, Graphic, Separator, Subheader } from '@smui/list';
@@ -11,12 +11,12 @@
 		open = false;
 	}
 	let pinned_locations = [
-		'C:/Users/noahm/OneDrive/Documents/BA4/ITDSML-12X004',
-		'C:/Users/noahm/OneDrive/Documents/BA4/ITDSML-12X004',
-		'C:/Users/noahm/OneDrive/Documents/BA4/ITDSML-12X004',
-		'C:/Users/noahm/OneDrive/Documents/BA4/ITDSML-12X004',
-		'C:/Users/noahm/OneDrive/Documents/BA4/ITDSML-12X004',
-		'C:/Users/noahm/OneDrive/Documents/BA4/ITDSML-12X004'
+		'/home/noahl/Documents/ba5/IA-13X005',
+		'/home/noahl/Documents/ba5/IA-13X005',
+		'/home/noahl/Documents/ba5/IA-13X005',
+		'/home/noahl/Documents/ba5/IA-13X005',
+		'/home/noahl/Documents/ba5/IA-13X005',
+		'/home/noahl/Documents/ba5/IA-13X005'
 	];
 
 	/// Get last element of path
@@ -49,27 +49,27 @@
 		});
 		i += 1;
 	}
-</script>
+</script> -->
 
 <!-- <div class="drawer-container"> -->
 <!-- Don't include fixed={false} if this is a page wide drawer.
         It adds a style for absolute positioning. -->
-<Drawer variant="modal" bind:open>
-	<Header>
-		<Title>Pinned Locations</Title>
-		<Subtitle>Folder added to quick access</Subtitle>
-	</Header>
-	<Content>
-		<List>
-			{#each pinned_loc_items as loc_item}
-				<Item
-					href={loc_item[1].uri}
-					on:click={loc_item[1].on_click}
-					activated={loc_item[1].activated}
-				>
-					<Graphic class="material-icons" aria-hidden="true">{loc_item[1].icon}</Graphic>
-					<Text>{loc_item[1].text}</Text>
-				</Item>
+<!-- <Drawer variant="modal" bind:open> -->
+<!-- 	<Header> -->
+<!-- 		<Title>Pinned Locations</Title> -->
+<!-- 		<Subtitle>Folder added to quick access</Subtitle> -->
+<!-- 	</Header> -->
+<!-- 	<Content> -->
+<!-- 		<List> -->
+<!-- 			{#each pinned_loc_items as loc_item} -->
+<!-- 				<Item -->
+<!-- 					href={loc_item[1].uri} -->
+<!-- 					on:click={loc_item[1].on_click} -->
+<!-- 					activated={loc_item[1].activated} -->
+<!-- 				> -->
+<!-- 					<Graphic class="material-icons" aria-hidden="true">{loc_item[1].icon}</Graphic> -->
+<!-- 					<Text>{loc_item[1].text}</Text> -->
+<!-- 				</Item> -->
 
 				<!-- <Item
 				href="javascript:void(0)"
@@ -130,14 +130,14 @@
 				<Graphic class="material-icons" aria-hidden="true">bookmark</Graphic>
 				<Text>Work</Text>
 			</Item> -->
-			{/each}
+			<!-- {/each}
 		</List>
 	</Content>
-</Drawer>
+</Drawer> -->
 
 <!-- Don't include fixed={false} if this is a page wide drawer.
         It adds a style for absolute positioning. -->
-<Scrim fixed={false} />
+<!-- <Scrim fixed={false} />
 <AppContent class="app-content">
 	<main class="main-content">
 		<Button on:click={() => (open = !open)}>
@@ -146,5 +146,5 @@
 		<br />
 		<pre class="status">Active: {active}</pre>
 	</main>
-</AppContent>
+</AppContent> -->
 <!-- </div> -->
