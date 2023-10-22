@@ -37,7 +37,7 @@
 </script>
 
 <div class="w-[100%] max-w-5xl mx-auto">
-	<nav>
+	<!-- <nav>
 		<TabBar
 			{tabs}
 			let:tab
@@ -49,7 +49,7 @@
 				<Label>{tab.label}</Label>
 			</Tab>
 		</TabBar>
-	</nav>
+	</nav> -->
 </div>
 <hr />
 
