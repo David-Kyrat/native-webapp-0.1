@@ -29,7 +29,6 @@
 				>
 					<HelperText slot="helper">Website will open in another window</HelperText>
 				</Textfield>
-				<button type="submit"> Please save me </button>
 			</form>
 		</div>
         <p>a = {value}</p>
@@ -49,3 +48,4 @@
 		margin-bottom: 50px auto !important;
 	}
 </style>
+

@@ -8,8 +8,3 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-bun.lockb
-<<<<<<< HEAD
-package-lock.json
-=======
->>>>>>> 864c26ba605d412f2756299e9801658a1828b15d

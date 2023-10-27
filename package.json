@@ -1,5 +1,5 @@
 {
-  "name": "first-test-fix",
+  "name": "native-browser",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,13 +11,10 @@
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write .",
     "smui-theme": "smui-theme compile static/smui.css -i src/theme",
-    "prepare": "bun run smui-theme"
+    "prepare": "npm run smui-theme"
   },
   "devDependencies": {
-    "@material/elevation": "^14.0.0",
-    "@material/tab-scroller": "^14.0.0",
     "@material/theme": "^14.0.0",
-    "@mdi/js": "^7.2.96",
     "@playwright/test": "^1.28.1",
     "@smui-extra/bottom-app-bar": "^7.0.0-beta.9",
     "@smui/button": "^7.0.0-beta.9",
@@ -27,11 +24,8 @@
     "@smui/drawer": "^7.0.0-beta.9",
     "@smui/fab": "^7.0.0-beta.9",
     "@smui/icon-button": "^7.0.0-beta.9",
-    "@smui/image-list": "^7.0.0-beta.15",
-    "@smui/layout-grid": "^7.0.0-beta.15",
     "@smui/paper": "^7.0.0-beta.15",
-    "@smui/tab": "^7.0.0-beta.14",
-    "@smui/tab-bar": "^7.0.0-beta.14",
+    "@smui/textfield": "^7.0.0-beta.15",
     "@smui/top-app-bar": "^7.0.0-beta.9",
     "@sveltejs/adapter-auto": "^2.0.0",
     "@sveltejs/adapter-static": "^1.0.0-next.50",
@@ -45,7 +39,7 @@
     "prettier": "^2.8.0",
     "prettier-plugin-svelte": "^2.10.1",
     "smui-theme": "^7.0.0-beta.9",
-    "svelte": "^4.2.1",
+    "svelte": "^4.0.0",
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.6",
     "vitest": "^0.25.3"

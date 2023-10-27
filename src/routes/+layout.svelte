@@ -24,7 +24,9 @@
 	/>
 
 	<!-- SMUI -->
-	<link rel="stylesheet" href="https://unpkg.com/svelte-material-ui/bare.css" />
+	<!-- <link rel="stylesheet" href="https://unpkg.com/svelte-material-ui/bare.css" /> -->
+	<link rel="stylesheet" href="/smui.css" />
+    
 
 	<!-- NerdFonts -->
 	<link rel="stylesheet" href="https://www.nerdfonts.com/assets/css/webfont.css" />
