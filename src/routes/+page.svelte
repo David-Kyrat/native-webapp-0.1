@@ -6,20 +6,20 @@
 
 	let value = '';
 	$: is_active = $page.url.pathname === '/';
-
-	async function open_window() {
-        
-        alert("Lul");
-		await invoke('open_window', { url: value, title: value });
-	}
+    
+    async function browse() {
+        let url = value;
+        if (!url.includes("http")) url = `https://${url}`
+        window.location = url
+    }
 </script>
 
-<Paper class="max-w-[95%] mx-5 my-80 h-80">
+<Paper class="max-w-[95%] mx-5 my-auto h-80">
 	<Title>App opener</Title>
 	<br />
 	<Content>
 		<div class="margins">
-			<form on:submit={open_window}>
+			<form on:submit={browse}>
 				<input value/>
 				<Textfield
 					style="width: 100%;"

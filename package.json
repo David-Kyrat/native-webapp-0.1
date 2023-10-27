@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@material/elevation": "^14.0.0",
+    "@material/tab-scroller": "^14.0.0",
     "@material/theme": "^14.0.0",
     "@mdi/js": "^7.2.96",
     "@playwright/test": "^1.28.1",
