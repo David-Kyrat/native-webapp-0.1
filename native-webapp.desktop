@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=native-webapp
+StartupWMClass=native-webapp
+Comment=WRY Rust webview apps opener to give a native feeling without bundling and entire web browser.
+Exec=~/.local/share/native-webapp/native-webapp
+Icon=/usr/share/get-total-size/icons/icon.png
+Type=Application
