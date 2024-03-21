@@ -17,8 +17,8 @@
       "active": true,
       "category": "DeveloperTool",
       "copyright": "",
-      "deb": {
-        "depends": []
+      "appimage": {
+        "bundleMediaFramework": false
       },
       "externalBin": [],
       "icon": [

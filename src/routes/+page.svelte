@@ -64,7 +64,7 @@
 </Paper>
 
 <style>
-  * :global(AppShortcut) {
+  :global(AppShortcut) {
     display: inline-block;
     padding: 20em;
   }
