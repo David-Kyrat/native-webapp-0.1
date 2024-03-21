@@ -38,8 +38,6 @@
 	gap = `gap-${col_nb * 2}`; */
 </script>
 
-<h1>Mail</h1>
-
 <!-- App shortcut grid -->
 <!-- <div class="flex flex-row flex-wrap justify-between content-between mx-3 max-w-5xl"> -->
 <!-- <div class="grid grid-cols-3 gap-6 mx-5 place-content-evenly max-w-xl"> -->
