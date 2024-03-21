@@ -1,12 +1,26 @@
-Proof of Concept for Shortcut WebApp, launching regularly used website in a tauri (Rust WebView) desktop application.
+# Native WebApps
 
-Tries to imitate PWA but more lightly.
+# Description
 
+Proof of Concept for Shortcut WebApp launching regularly used website in a [tauri](https://tauri.app) (Rust WebView) desktop application.
+
+## Images
+
+![screen-mail-tab](./static/res/screenshot-mail-tab.png)
+
+![screen-calendar-tab](./static/res/screenshot-calendar-tab.png)  
+
+![screen-proton-view](./static/res/screenshot-proton-view.png)
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Install [tauri](https://tauri.app)
+
+Install dependencies with `npm install` (or `pnpm install` or `yarn` / `bun`), start a development server:
 
 ```bash
 cargo tauri dev
+
+# use --host to expose
+cargo tauri dev --host
 ```

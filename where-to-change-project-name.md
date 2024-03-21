@@ -1,6 +1,0 @@
-src-tauri\tauri.conf.json:    "productName": "first-test-fix"  
-src-tauri\tauri.conf.json:        "title": "first-test-fix"  
-package.json:	"name": "first-test-fix"  
-package-lock.json:	"name": "first-test-fix"  
-package-lock.json:			"name": "first-test-fix"  
-node_modules\.package-lock.json:	"name": "first-test-fix"  

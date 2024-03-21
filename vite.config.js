@@ -8,8 +8,5 @@ export default defineConfig({
     },
     ssr: {
         noExternal: [/^@material\//, /^@smui(?:-extra)?\//],
-    },
-    server: {
-        port: 8080
     }
 });

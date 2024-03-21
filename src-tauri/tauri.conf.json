@@ -1,12 +1,12 @@
 {
   "build": {
-    "beforeBuildCommand": "npm run build",
-    "beforeDevCommand": "npm run dev",
-    "devPath": "http://localhost:8080",
+    "beforeBuildCommand": "bun run build",
+    "beforeDevCommand": "bun run dev",
+    "devPath": "http://localhost:5173",
     "distDir": "../build"
   },
   "package": {
-    "productName": "native-browser",
+    "productName": "native-webapp-0.1",
     "version": "0.1.0"
   },
   "tauri": {
@@ -28,7 +28,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "ch.davidkyrat.tauri.test",
+      "identifier": "ch.davidkyrat.tauri.nativewebapp01",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -57,7 +57,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "native-browser",
+        "title": "native-webapp-0.1",
         "width": 800
       }
     ]

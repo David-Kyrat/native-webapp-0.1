@@ -11,6 +11,11 @@
   $error: color-palette.$red-900
 );
 
+//
+// MDC Elevation Classes
+//
+// @use '@material/elevation/mdc-elevation';
+
 html,
 body {
   background-color: theme.$surface;
