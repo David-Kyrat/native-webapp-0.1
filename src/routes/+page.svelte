@@ -14,34 +14,24 @@
 
 	let app_shortcuts = [
 		{
-			title: 'Gmail',
-			icon: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg',
-			url: 'https://mail.google.com/mail/u/0/#inbox'
+			title: 'ProtonPass',
+			icon: 'https://static.wikia.nocookie.net/logopedia/images/e/e4/Proton_Pass_Icon.svg',
+			url: 'https://pass.proton.me'
 		},
 		{
 			title: 'ProtonMail',
 			icon: 'https://www.privacyguides.org/en/assets/img/email/protonmail.svg',
-			url: 'https://mail.proton.me/u/6/inbox'
-		},
-		{
-			title: 'atempt-UniMail',
-			icon: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg',
-			url: 'http://outlook.com/owa/unige.ch/munz3@unigech.mail.onmicrosoft.com'
+			url: 'https://mail.proton.me'
 		},
 		{
 			title: 'UniMail',
 			icon: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg',
-			url: 'https://outlook.office.com/mail/'
+			url: 'http://outlook.com/owa/unige.ch/munz3@unigech.mail.onmicrosoft.com'
 		},
 		{
-			title: 'ProtonMail',
-			icon: 'https://www.privacyguides.org/en/assets/img/email/protonmail.svg',
-			url: 'https://mail.proton.me/u/6/inbox'
-		},
-		{
-			title: 'ProtonMail',
-			icon: 'https://www.privacyguides.org/en/assets/img/email/protonmail.svg',
-			url: 'https://mail.proton.me/u/6/inbox'
+			title: 'Gmail',
+			icon: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg',
+			url: 'https://mail.google.com/mail/u/0/#inbox'
 		}
 	];
 	// $: app_nb = app_shortcuts.length;
