@@ -19,9 +19,9 @@
       url: "https://mail.proton.me"
     },
     {
-      title: "UniMail",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg",
-      url: "http://outlook.com/owa/unige.ch/munz3@unigech.mail.onmicrosoft.com"
+      title: "ToDo",
+      icon: "https://upload.wikimedia.org/wikipedia/commons/6/67/Microsoft_To-Do_icon.png",
+      url: "https://to-do.live.com/tasks/"
     },
     {
       title: "Gmail",
