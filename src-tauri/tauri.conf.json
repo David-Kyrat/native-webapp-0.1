@@ -14,14 +14,14 @@
       "all": false
     },
     "bundle": {
-      "active": false,
+      "active": true,
       "category": "DeveloperTool",
       "copyright": "",
       "deb": {
         "depends": []
       },
       "appimage": {
-        "bundleMediaFramework": false
+        "bundleMediaFramework": true
       },
       "externalBin": [],
       "icon": [
@@ -31,6 +31,11 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
+      "rpm": {
+        "epoch": 0,
+        "files": {},
+        "release": "1"
+      },
       "identifier": "ch.davidkyrat.tauri.nativewebapp01",
       "longDescription": "",
       "macOS": {

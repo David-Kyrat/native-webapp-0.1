@@ -27,6 +27,11 @@
       title: "Gmail",
       icon: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg",
       url: "https://mail.google.com/mail/u/0/#inbox"
+    },
+    {
+      title: "OneDrive TL",
+      icon: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Microsoft_Office_OneDrive_%282019%E2%80%93present%29.svg",
+      url: "https://transportslausannois-my.sharepoint.com"
     }
   ]
   // $: app_nb = app_shortcuts.length;
